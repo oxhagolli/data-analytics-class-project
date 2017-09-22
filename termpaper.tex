@@ -1,0 +1,208 @@
+% This file is based on the "sig-alternate.tex" V1.9 April 2009
+% This file should be compiled with V2.4 of "sig-alternate.cls" April 2009
+
+\documentclass{sig-alternate}
+
+\usepackage{url}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{balance}
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\permission{}
+\CopyrightYear{2017}
+\crdata{0-00000-00-0/00/00}
+\begin{document}
+
+\title{Data Analytics and Cognitive Computing Group Project}
+\subtitle{Detecting Patterns in ...????}
+\numberofauthors{2}
+\author{
+\alignauthor
+Victoria Sardelli
+\alignauthor
+Orens Xhagolli
+}
+\date{22 September 2017}
+\maketitle
+\begin{abstract}
+  
+\end{abstract}
+
+\section{Introduction}
+\label{introduction}
+
+Use three or four paragraphs to present an introduction to your termpaper.
+
+Alsp, provide a roadmap for the remaining sections of the paper. For
+example, you can state that Section \ref{motivation} presents a
+motivation for the term paper, and section \ref{related work} presents your
+literature survey of the work done in your target area. Section
+\ref{current approaches} discusses different approaches that have been
+taken to address cognitive computing, and \ref{comparative analysis}
+presents a comparative analysis of the approaches. Section
+\ref{lessons learned} should discuss---in sufficient depth---what you
+learned from this term paper.  Section \ref{current status and future
+  work} describe the current state of the project and what else
+could be done in the future.
+
+{\bf Note 1: This specific file is a generic template so the
+  section titles may not fit your specific needs so feel
+  free to change them as needed.}
+
+{\bf Note 2: Please change the words so that you use your own word,
+  not these suggested words. This is important because the paper needs
+  to be in your own words!}
+
+\section{Motivation}
+\label{motivation}
+
+Use this section to motivate why your term paper. Describe the
+fundamental issues being explored in the term paper, and what kinds of
+comparisons
+
+\section{Related Work}
+\label{related work}
+
+Use this section to describe what other people have been doing to
+in this space. Make sure your literature survey is fairly
+complete, and you must cite your sources correctly per ACM style
+guidelines (and of course, you need to use \LaTeX and \BibTeX correctly).
+
+\section{Current Approaches}
+\label{current approaches}
+
+Discuss each of the approaches/products/projects that you are comparing in this paper.
+
+\subsection{IBM Watson}
+\label{IBM Watson}
+Provide the basic features, strengths and weaknesses of this approach. 
+
+
+\subsection{Approach 2}
+\label{approach 2}
+Provide the basic features, strengths and weaknesses of this approach. 
+
+
+\subsection{Approach 3}
+\label{approach 3}
+Provide the basic features, strengths and weaknesses of this approach. 
+
+
+
+\subsection{Approach 4, if any}
+\label{approach 4}
+Provide the basic features, strengths and weaknesses of this approach. 
+
+
+
+\section{Comparative Analysis}
+\label{comparative analysis}
+
+This section will present a comparison of the different approaches to
+cognitive computing, which you discussed in Section \ref{current approaches}.
+
+
+\section{Lessons Learned}
+\label{lessons learned}
+
+Describe what you learned from the term paper;
+this section, like the others, plays a critical component in
+determining your final grade.
+
+\section{Current Status \& Future Work}
+\label{current status and future work}
+
+Use this section to describe the current status of your work
+and what else needs to be done. Also, discuss what further directions
+your work can take by others.
+
+
+
+The next subsection is meant to provide you with some help
+in dealing with figures, tables and citations, as these are hard for
+folks new to \LaTeX. 
+
+{\bf And please delete the following subsection before you make any submissions!}
+
+\subsection{Tables, Figures, and Citations/References}
+
+Tables, figures, and citations/references in technical
+documents need to be presented correctly. As many students
+are not familiar with using these objects, here is a quick
+guide extracted from the ACM style guide.
+
+\begin{table}
+\centering
+\caption{Feelings about Issues}
+\begin{tabular}{|l|r|l|} \hline
+Flavor&Percentage&Comments\\ \hline
+Issue 1 &  10\% & Loved it a lot\\ \hline
+Issue 2 &  20\% & Disliked it immensely\\ \hline
+Issue 3 &  30\% & Didn't care one bit\\ \hline
+Issue 4 &  40\% & Duh?\\ \hline
+\end{tabular}
+\end{table}
+
+
+First, note that figures in the term paper must be original,
+that is, created by the student: please do not cut-and-paste
+figures from any other paper you have read. Second, if you
+do need to include figures, they should be handled as
+demonstrated here. State that Figure \ref{sample graphic} is
+a simple illustration used in the ACM Style sample
+document. Figures are never below or above the
+text. Incidentally, in proper technical writing (for reasons
+beyond the scope of this discussion), table captions are
+above the table and figure captions are below the figure.
+
+\begin{figure}[htb]
+\label{sample graphic}
+\begin{center}
+\includegraphics[width=1.5in]{fly.jpg}
+\caption{A sample black \& white graphic (JPG).}
+\end{center}
+\end{figure}
+
+Finally, citing documents needs to be done properly too. For
+example, a paper by Mic Bowman, Saumya K. Debray, and Larry
+L. Peterson could be cited as Bowman, Debray, and Peterson
+\cite{bowman:reasoning}. A set of papers could collectively
+be cited as the literature in this area consists of several
+interesting papers
+\cite{braams:babel,clark:pct,herlihy:methodology}.
+
+You will find the BibTeX entries needed for many papers being cited,
+otherwise you can write your own versions easily and add them to the
+$report.bib$ file in the folder. There are many sample bibtex
+template files that can be used to model your own references.
+
+The list of all references will be generated in ACMRef
+standard style using the \LaTeX{}/\BibTeX{}. Note that you
+need to first the following sequence to get the paper
+compiled correctly:
+
+\begin{enumerate}
+\item {\tt latex} {\em termpaper}
+\item {\tt bibtex} {\em termpaper}
+\item {\tt latex} {\em termpaper}
+\item {\tt latex} {\em termpaper}
+\end{enumerate}
+
+\bibliographystyle{abbrv}
+\bibliography{termpaper}
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+\balance
+\end{document}
+
+
+
+
+
+
+
+
