@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.15)  25 SEP 2017 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.15)  25 SEP 2017 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,26 +297,36 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 28.
 
 (c:/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./termpaper.bbl) [1{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex
-.map}
+)
+Overfull \hbox (2.31775pt too wide) in paragraph at lines 34--35
+\T1/aer/m/n/9 question-and-answer re-source, the pres-ence of du-pli-cate ques-
+
+ []
+
+(./termpaper.bbl)
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[1{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./termpaper.aux) ) 
+]
+(./termpaper.aux) ) 
 Here is how much of TeX's memory you used:
  2878 strings out of 492990
  36314 string characters out of 6136349
- 93882 words of memory out of 5000000
+ 99882 words of memory out of 5000000
  6362 multiletter control sequences out of 15000+600000
  42762 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,28p,452b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c
-:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2
-017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/
-fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-
-Output written on termpaper.pdf (1 page, 45690 bytes).
+ 41i,11n,28p,1312b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/201
+7/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on termpaper.pdf (1 page, 55801 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
