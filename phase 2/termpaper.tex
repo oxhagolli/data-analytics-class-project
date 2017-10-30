@@ -1,0 +1,63 @@
+% This file is based on the "sig-alternate.tex" V1.9 April 2009
+% This file should be compiled with V2.4 of "sig-alternate.cls" April 2009
+
+\documentclass{sig-alternate}
+
+\usepackage{url}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{balance}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\permission{}
+\CopyrightYear{2017}
+\crdata{0-00000-00-0/00/00}
+\begin{document}
+
+\title{Data Analytics and Cognitive Computing Group Project}
+\subtitle{Detecting Duplicate Questions in Quora Dataset}
+\numberofauthors{2}
+\author{
+\alignauthor
+Victoria Sardelli
+\alignauthor
+Orens Xhagolli
+}
+\date{22 September 2017}
+\maketitle
+
+\section{Introduction}
+\label{introduction}
+For our project, we would like to develop a system that will determine if two given Quora questions are duplicates of each other. Towards the beginning of October, we began to work on our project and explore the capabilities of IBM Bluemix.
+
+First, we researched previous attempts at solving this problem. We found many papers and resources regarding the determination of duplicate sentences. Two interesting sources in particular were found on Quora\textsc{\char39}s website and Kaggle.com. On Quora\textsc{\char39}s website, Nikhil Dandekar posted an article entitled "Semantic Question Matching with Deep Learning" in which he more formally defined the problem and briefly talked about three approaches that Quora engineers implemented as possible solutions. The best accuracy they reached with those approaches was 87\% by using a Long Short Term Memory (LSTM) Neural Network. On Kaggle.com, a user named shubh24 briefly discussed six approaches that could be used to tackle the problem. The resources we found helped us to learn about the wide range of strategies that exist to solve this problem, as well as the approaches that experts in the field are implementing and improving upon. Using the powerful Watson APIs that are available to us, we will try to replicate some of the techniques we found that are within our means to implement.
+
+We will use Python for our project because it is supported by IBM, provides capabilities for fast prototyping (e.g. lack of types, list comprehensions, etc.), and has a rich set of libraries that we can use to clean and process data before and after we make calls to Watson's APIs. For example, by using Python's Natural Language Toolkit (NLTK) library, we can easily stem words and use WordNet. Finding synonyms is also made easier by the use of another Python library called Pyenchant.
+
+IBM Bluemix provides a substantial list of cloud services, including those used for Natural Language Processing. Among these services are Language Translator, Tone Analyzer, and Natural Language Understanding. They're fairly similar in the way they operate, but we found that the Natural Language Understanding and Language Translator services encapsulate many features of interest to us, and we decided to experiment with their APIs. The Natural Language Understanding (NLU) service is a set of rest APIs that allow you to analyze a corpus in a variety of ways. After playing around with some of the APIs provided, we decided that the entity recognition, keyword extraction, categorization, semantic role understanding, and concept recognition APIs were the most beneficial ones to use for our project. We experimented with these APIs to see what kind of information we could extract from example sentences and what kinds of issues we might come across.
+
+The first two sentences we experimented with were "How can I be a good geologist?" and "What should I do to be a great geologist?" It is interesting to note that the first sentence returned information about the semantic roles of words in the sentence, such as the subject being "I" and the verb being the word "be." However, the second sentence did not return any results from the semantic roles API call. In addition, the two sentences did not return any information regarding the concepts in the sentence. We compared this to the results returned when using two sentences about Star Wars, which returned a long list of concepts. A potential issue we discovered when using those two Star Wars questions was how to handle sentences that used incorrect grammar or words.
+
+Another example of a sentence we tried was "What is the difference between \& and 'and'?" We were unable to glean any useful information from the results of the API calls. No concepts or semantic roles were returned, and the categories that were determined for this sentence included seemingly unrelated categories such as "cold and flu," "life insurance," and "divorce." We believe that this problem stems from the fact that the main interest of this sentence is the symbol "\&," which Watson's APIs most likely do not know how to handle correctly. Another example of an incorrectly interpreted sentence involving symbols is the question "When do you use \char30b7 instead of し?" The results of analyzing this sentence were similarly unhelpful. The issues with this latter sentence caused us to consider what we should do when we encounter words or characters from foreign languages within Quora questions, since the NLU APIs may not handle these as expected. A service that we considered using is the Language Translator service. Although it only works for a small set of languages, it is worth exploring to see if it can be used to aid sentence analysis.
+
+We plan to continue exploring the capabilities of Watson and Python's Natural Language Processing libraries in an attempt to develop a solution to the problem of duplicate Quora questions.
+
+\bibliographystyle{abbrv}
+\bibliography{termpaper}
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+\balance
+\end{document}
+
+
+
+
+
+
+
+
